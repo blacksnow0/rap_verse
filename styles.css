@@ -1,0 +1,263 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #333;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 70px;
+}
+
+header p {
+  display: flex;
+  justify-content: center;
+  background-color: #696363;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid white;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  color: white;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+nav ul li a:hover {
+  border-bottom: 1px solid white;
+}
+
+section {
+  padding: 20px;
+}
+#blog-container h2 {
+  display: flex;
+  justify-content: center;
+}
+
+#blogs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  background-color: #333;
+}
+
+#blogs article {
+  background-color: #615e5e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  padding: 15px;
+  overflow: hidden;
+}
+
+#blogs article img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+#blogs article h3 {
+  font-size: 1.25rem;
+  margin: 10px 0;
+}
+
+#blogs article .content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+#blogs article p {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+#about-me {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  font-family: "Arial", sans-serif;
+  border: 1px solid white;
+}
+
+#about-me h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: whitesmoke;
+}
+
+#about-me p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+#about-me ul {
+  padding: 0;
+  margin: 15px 0 0;
+}
+
+#about-me ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+#about-me a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#about-me a:hover {
+  text-decoration: underline;
+}
+
+#contact {
+  margin: 20px auto;
+  padding: 40px;
+  max-width: 1200px;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+}
+
+#contact h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: whitesmoke;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contact fieldset {
+  border: 1px solid white;
+
+  padding: 20px;
+}
+
+#contact legend {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+#contact label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#contact input,
+#contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  border-color: hsl(136, 65%, 51%);
+  outline: none;
+  box-shadow: 0 0 5px rgba(26, 172, 131, 0.5);
+}
+
+#contact button {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: white;
+  background-color: hsl(192, 70%, 51%);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact button[type="reset"] {
+  background-color: hsl(136, 65%, 51%);
+}
+
+#contact button:hover {
+  background-color: hsl(192, 70%, 41%);
+}
+#contact button[type="reset"]:hover {
+  background-color: hsl(136, 65%, 41%);
+}
+
+#contact textarea {
+  resize: none;
+}
+
+@media (max-width: 768px) {
+  #contact {
+    padding: 20px;
+  }
+
+  #contact fieldset {
+    padding: 15px;
+  }
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid white;
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  #blogs {
+    grid-template-columns: 1fr;
+  }
+
+  #about-me {
+    padding: 10px;
+  }
+
+  #contact {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+}
